@@ -5,10 +5,10 @@ $(function() {
    */
   'use strict';
   var data = {
-    labels: ["2013", "2014", "2014", "2015", "2016", "2017"],
+    labels: ["2017", "2018", "2019"],
     datasets: [{
-      label: '# of Votes',
-      data: [10, 19, 3, 5, 2, 3],
+      label: '# de Beneficios',
+      data: [83, 182, 298],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
