@@ -333,13 +333,13 @@
   <!-- End custom js for this page-->
   <script>
     
-      var map = L.map('dash-map').setView([-32, -0.09], 13);
+      var map = L.map('dash-map').setView([-32.551438, -71.457834], 16);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  L.marker([51.5, -0.09]).addTo(map)
+  L.marker([-32.551438, -71.457834]).addTo(map)
     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
     .openPopup();
   
