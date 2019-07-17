@@ -349,4 +349,4 @@ $(function() {
       options: doughnutPieOptions
     });
   }
-});
+})

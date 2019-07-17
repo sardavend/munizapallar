@@ -9,7 +9,8 @@
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/images/layers-2x.png"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
@@ -251,9 +252,9 @@
             </div>
           </div>-->
           <div class="row">
-            <div class="col-lg-10">
+            <div class="col-lg-8">
               <div class="row">
-                <div class="col-lg-4 grid-margin stretch-card">
+                <div class="col-lg-6 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">Tipo de Beneficio</h4>
@@ -261,7 +262,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 grid-margin grid-margin-lg-0 stretch-card">
+                <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">Pie chart</h4>
@@ -271,7 +272,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-lg-4 grid-margin grid-margin-lg-0 stretch-card">
+                <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">Scatter chart</h4>
@@ -279,7 +280,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 grid-margin stretch-card">
+                <div class="col-lg-6 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">Beneficios</h4>
@@ -289,7 +290,9 @@
                 </div>  
               </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-md-4">
+              <div id="dash-map">
+              </div>
               
             </div>
 
@@ -328,6 +331,19 @@
   <!-- Custom js for this page-->
   <script src="js/chart.js"></script>
   <!-- End custom js for this page-->
+  <script>
+    
+      var map = L.map('dash-map').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .openPopup();
+  
+  </script>
 </body>
 
 </html>
